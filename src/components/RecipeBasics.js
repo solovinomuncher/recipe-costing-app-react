@@ -1,8 +1,8 @@
 export default function RecipeBasics(props) {
   return (
-    <fieldset>
+    <fieldset className="recipe-basics">
       <legend>Recipe Basics</legend>
-      <p>
+      <p className="recipe-basics__input">
         <label>Recipe Name:</label>
         <input
           type="text"
@@ -11,8 +11,8 @@ export default function RecipeBasics(props) {
           onChange={props.handleChange}
         />
       </p>
-      <p>
-        <label>Recipe Serving Size:</label>
+      <p className="recipe-basics__input">
+        <label>Serving Size:</label>
         <input
           type="number"
           name="recipeServingSize"

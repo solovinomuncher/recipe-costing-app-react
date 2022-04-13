@@ -2,7 +2,7 @@ export default function RecipeIngredient(props) {
   const ingredientInputArray = [];
   for (let i = 0; i < 10; i++) {
     ingredientInputArray.push(
-      <p key={i}>
+      <p key={i} className="ingredient-input">
         <input
           placeholder="Ingredient Name"
           type="text"
@@ -17,8 +17,8 @@ export default function RecipeIngredient(props) {
             <option value="dashes">Dashes</option>
             <option value="ounces">Ounces</option>
             <option value="pinches">Pinches</option>
-            <option value="tablespoons">Tablespoons</option>
-            <option value="teaspoons">Teaspoons</option>
+            {/* <option value="tablespoons">Tablespoons</option> */}
+            {/* <option value="teaspoons">Teaspoons</option> */}
             <option value="pounds">Pounds</option>
             <option value="each">Each</option>
           </optgroup>

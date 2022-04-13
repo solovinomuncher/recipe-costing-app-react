@@ -1,3 +1,56 @@
+#root {
+  font-family: "Montserrat", sans-serif;
+}
+
 .app-title {
   text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 10px;
+}
+
+.submit-button {
+  width: 75px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.form-buttons {
+  display: flex;
+  justify-items: center;
+  width: 100%;
+}
+
+.recipe-basics__input {
+  display: grid;
+  grid-template: 1fr / 1fr 3fr;
+}
+
+.ingredient-input {
+  display: grid;
+  grid-template: 1fr / repeat(6, minmax(20px, auto));
+  gap: 10px;
+}
+
+.ingredient-cost {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  background: lightgray;
+}
+
+.display {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  justify-items: center;
 }
