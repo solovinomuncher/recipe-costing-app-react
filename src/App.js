@@ -66,6 +66,11 @@ function App() {
     }
   }
 
+  const round = (value, precision) => {
+    let multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+  };
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -132,11 +137,6 @@ function App() {
       setFormData(copiedRecipe);
     };
 
-    const round = (value, precision) => {
-      let multiplier = Math.pow(10, precision || 0);
-      return Math.round(value * multiplier) / multiplier;
-    };
-
     calculateRecipeCosts(formData);
   }
 
@@ -159,13 +159,15 @@ function App() {
     totalRecipeCost += ingredientData.recipeCosts;
   }
 
-  function handleClear() {
-    setFormData({
-      recipeName: "",
-      recipeServingSize: "",
-      recipeIngredients: {},
-    });
-  }
+  totalRecipeCost = round(totalRecipeCost, 2);
+
+  // function handleClear() {
+  //   setFormData({
+  //     recipeName: "",
+  //     recipeServingSize: "",
+  //     recipeIngredients: {},
+  //   });
+  // }
 
   return (
     <main className="app">
